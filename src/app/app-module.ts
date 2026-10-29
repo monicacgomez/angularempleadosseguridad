@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { provideHttpClient } from '@angular/common/http';
 import { ServiceEmpleados } from './services/service.empleados';
 import { LoginComponent } from './components/login-component/login-component';
+import { AuthGuard } from './guards/auth-guard';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { LoginComponent } from './components/login-component/login-component';
     LoginComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
-  providers: [provideBrowserGlobalErrorListeners(), provideHttpClient(), ServiceEmpleados],
+  providers: [AuthGuard, provideBrowserGlobalErrorListeners(), provideHttpClient(), ServiceEmpleados],
   bootstrap: [App],
 })
 export class AppModule {}
