@@ -11,6 +11,7 @@ import { provideHttpClient } from '@angular/common/http';
 import { ServiceEmpleados } from './services/service.empleados';
 import { LoginComponent } from './components/login-component/login-component';
 import { AuthGuard } from './guards/auth-guard';
+import { EjemploSignalComponent } from './components/ejemplo-signal-component/ejemplo-signal-component';
 
 @NgModule({
   declarations: [
@@ -20,10 +21,15 @@ import { AuthGuard } from './guards/auth-guard';
     PerfilComponent,
     SubordinadosComponent,
     LoginComponent,
+    EjemploSignalComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
-  providers: [AuthGuard, provideBrowserGlobalErrorListeners(), provideHttpClient(), ServiceEmpleados],
+  providers: [
+    AuthGuard,
+    provideBrowserGlobalErrorListeners(),
+    provideHttpClient(),
+    ServiceEmpleados,
+  ],
   bootstrap: [App],
 })
 export class AppModule {}
-

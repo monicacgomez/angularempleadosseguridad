@@ -5,6 +5,7 @@ import { LoginComponent } from './components/login-component/login-component';
 import { SubordinadosComponent } from './components/subordinados-component/subordinados-component';
 import { PerfilComponent } from './components/perfil-component/perfil-component';
 import { AuthGuard } from './guards/auth-guard';
+import { EjemploSignalComponent } from './components/ejemplo-signal-component/ejemplo-signal-component';
 
 const routes: Routes = [
   {path: "", component: HomeComponent},
@@ -19,6 +20,9 @@ const routes: Routes = [
     , component: SubordinadosComponent,
     canActivate: [AuthGuard]
   },
+  {
+    path: "signal", component: EjemploSignalComponent
+  }
 ];
 
 @NgModule({

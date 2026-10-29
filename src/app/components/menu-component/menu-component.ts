@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ServiceSignal } from '../../services/service.signal';
 
 @Component({
   selector: 'app-menu-component',
@@ -6,7 +7,11 @@ import { Component } from '@angular/core';
   styleUrl: './menu-component.css',
   templateUrl: './menu-component.html',
 })
+
 export class MenuComponent {
+  private _serviceSignal: ServiceSignal = inject(ServiceSignal);
+  public contador = this._serviceSignal.contador;
+
   logOutEmpleado(): void {
     sessionStorage.removeItem("TOKEN");
   }
