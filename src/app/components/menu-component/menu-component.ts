@@ -1,5 +1,7 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, Service } from '@angular/core';
 import { ServiceSignal } from '../../services/service.signal';
+import { ServiceAuthEmpleados } from '../../services/service.auth.empleados';
+import { Empleado } from '../../models/empleado';
 
 @Component({
   selector: 'app-menu-component',
@@ -10,9 +12,12 @@ import { ServiceSignal } from '../../services/service.signal';
 
 export class MenuComponent {
   private _serviceSignal: ServiceSignal = inject(ServiceSignal);
+  private _serviceAuth: ServiceAuthEmpleados =
+  inject(ServiceAuthEmpleados);
+  public usuario = this._serviceAuth.user;
   public contador = this._serviceSignal.contador;
 
   logOutEmpleado(): void {
-    sessionStorage.removeItem("TOKEN");
+    this._serviceAuth.logOutEmpleado();
   }
 }

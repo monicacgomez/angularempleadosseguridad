@@ -25,6 +25,15 @@
         <h1 style="color: rgb(146, 87, 170);">
           Contador: {{contador ()}}
         </h1>
+        @if (usuario(); as dato) {
+          <h1 style="color:steelblue">
+            {{dato.apellido}}
+          </h1>
+        } @else {
+          <h1 style="color: tomato">
+            Sin login
+          </h1>
+        }
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
