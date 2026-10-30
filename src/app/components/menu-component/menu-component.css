@@ -1,0 +1,143 @@
+:host {
+  display: block;
+  font-family: Arial, sans-serif;
+}
+
+/* Barra de navegación */
+.navbar {
+  padding: 12px 28px;
+  background-color: #cbb5df !important;
+  border-bottom: 1px solid #b69acb;
+}
+
+/* Nombre de la marca */
+.navbar-brand {
+  color: #674b83 !important;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+/* Enlaces */
+.navbar .nav-link {
+  padding: 10px 13px !important;
+  color: #674b83 !important;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 7px;
+  transition: background-color 0.2s ease;
+}
+
+/* Enlace activo */
+.navbar .nav-link.active {
+  color: #514064 !important;
+  font-weight: 700;
+}
+
+/* Hover */
+.navbar .nav-link:hover {
+  background-color: #d8c7e8;
+  color: #514064 !important;
+}
+
+/* Información del contador y usuario */
+.navbar ul h1 {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+  padding: 8px 12px;
+  background-color: #e2d6f7;
+  border-radius: 7px;
+  font-size: 14px !important;
+  font-weight: 700;
+}
+
+/* Primer h1: contador */
+.navbar ul h1:first-of-type {
+  color: #76558f !important;
+}
+
+/* Segundo h1: usuario */
+.navbar ul h1:nth-of-type(2) {
+  color: #9273aa !important;
+}
+
+/* Menú desplegable */
+.navbar .dropdown-menu {
+  padding: 8px;
+  background-color: #faf7ff;
+  border: 1px solid #d8c7e8;
+  border-radius: 9px;
+  box-shadow: 0 4px 12px rgba(81, 64, 100, 0.10);
+}
+
+/* Opciones */
+.navbar .dropdown-item {
+  padding: 9px 12px;
+  color: #674b83;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+/* Hover opciones */
+.navbar .dropdown-item:hover {
+  background-color: #eee6f7;
+  color: #514064;
+}
+
+/* Separador */
+.navbar .dropdown-divider {
+  border-color: #d8c7e8;
+}
+
+/* Elementos deshabilitados */
+.navbar .nav-link.disabled {
+  color: #b5a5c4 !important;
+  opacity: 0.7;
+}
+
+/* Botón Log out */
+.navbar .btn-outline-danger {
+  padding: 8px 18px;
+  color: #76558f !important;
+  border: 1px solid #b69acb !important;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: background-color 0.2s ease;
+}
+
+/* Hover Log out */
+.navbar .btn-outline-danger:hover {
+  background-color: #d8c7e8 !important;
+  color: #514064 !important;
+}
+
+/* Botón hamburguesa */
+.navbar .navbar-toggler {
+  border-color: #b69acb;
+  border-radius: 7px;
+}
+
+.navbar .navbar-toggler:focus {
+  box-shadow: 0 0 0 3px rgba(182, 154, 203, 0.2);
+}
+
+/* Adaptación a móviles */
+@media (max-width: 991px) {
+  .navbar {
+    padding: 12px 18px;
+  }
+
+  .navbar .navbar-collapse {
+    padding: 14px 0 6px;
+  }
+
+  .navbar ul h1 {
+    margin: 6px 0;
+    width: fit-content;
+  }
+
+  .navbar .btn-outline-danger {
+    margin-top: 12px;
+  }
+}

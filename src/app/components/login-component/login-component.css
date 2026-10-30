@@ -1,0 +1,103 @@
+:host {
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: #514064;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  padding: 40px 28px 100px;
+  margin: 0;
+}
+
+/* Título principal */
+h1 {
+  margin: 10px auto 28px;
+  color: #76558f;
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Formulario */
+form {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 28px;
+  background-color: #faf7ff;
+  border: 1px solid #d8c7e8;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+/* Etiquetas */
+form label {
+  display: block;
+  margin: 16px 0 8px;
+  color: #674b83;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Campos */
+form .form-control {
+  width: 100%;
+  padding: 11px 13px;
+  background-color: #ffffff;
+  color: #514064;
+  border: 1px solid #d8c7e8;
+  border-radius: 7px;
+  font-size: 14px;
+  outline: none;
+}
+
+/* Selección de campos */
+form .form-control:focus {
+  border-color: #a98bc2;
+  box-shadow: 0 0 0 3px rgba(182, 154, 203, 0.2);
+}
+
+/* Botón */
+form .btn-warning {
+  display: block;
+  margin: 26px auto 0;
+  padding: 10px 28px;
+  background-color: #cbb5df !important;
+  color: #514064 !important;
+  border: none !important;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+form .btn-warning:hover {
+  background-color: #b69acb !important;
+}
+
+/* Mensaje */
+form + h1 {
+  margin: 24px auto;
+  padding: 14px 18px;
+  max-width: 480px;
+  background-color: #faf7ff;
+  color: #674b83;
+  border-left: 4px solid #b69acb;
+  border-radius: 7px;
+  font-size: 16px;
+}
+
+/* Móviles */
+@media (max-width: 600px) {
+  :host {
+    padding: 25px 18px 80px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  form {
+    padding: 20px;
+  }
+}

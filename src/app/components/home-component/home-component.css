@@ -1,0 +1,50 @@
+:host {
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: #514064;
+  background-color: #eee6f7;
+  box-sizing: border-box;
+}
+
+/* Fondo */
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+  margin-left: calc(50% - 50vw);
+  padding: 20px 28px 200px;
+  background-color: #eee6f7;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Imagen */
+.welcome-image {
+  display: block;
+  width: 100%;
+  max-width: 650px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 18px;
+  margin-bottom: 28px;
+}
+
+/* Móviles */
+@media (max-width: 600px) {
+  .welcome-section {
+    padding: 25px 18px;
+  }
+
+  .welcome-image {
+    height: 230px;
+  }
+
+  .welcome-section h1 {
+    font-size: 30px;
+  }
+}

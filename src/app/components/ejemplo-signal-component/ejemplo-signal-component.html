@@ -1,13 +1,23 @@
-<p>ejemplo-signal-component works!</p>
-<h2 style="color:violet">
-    Contador: {{contador()}}
-</h2>
-<h2 style="color:teal">
-    Doble: {{doble()}}
-</h2>
-<button (click) = "reiniciarContador()">
-    Reiniciar
-</button>
-<button (click) = "incrementarContador()">
-    Incrementar
-</button>
+<section class="signal-section">
+    <h1>Signal Counter</h1>
+    <p class="subtitle">¡Controla tu contador!</p>
+
+    <div class="counter-info">
+        <h2>Contador</h2>
+        <span class="counter-value">{{contador()}}</span>
+
+        <h2>Doble</h2>
+        <span class="double-value">{{doble()}}</span>
+    </div>
+
+    <div class="counter-buttons">
+        <button class="btn-reset" (click)="reiniciarContador()">
+            Reiniciar
+        </button>
+
+        <button class="btn-increment" (click)="incrementarContador()">
+            Incrementar
+        </button>
+    </div>
+</section>
+

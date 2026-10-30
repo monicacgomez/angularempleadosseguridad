@@ -1,0 +1,62 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  padding: 28px;
+  font-family: Arial, sans-serif;
+  color: #514064;
+  background-color: #ffffff;
+}
+
+/* Título principal */
+h1 {
+  margin: 10px 0 28px;
+  color: #76558f !important;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* Lista del perfil */
+.list-group {
+  max-width: 550px;
+  padding: 0;
+  border: 1px solid #d8c7e8;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Elementos de la lista */
+.list-group-item {
+  padding: 18px 20px;
+  background-color: #faf7ff;
+  color: #514064;
+  border: none;
+  border-bottom: 1px solid #e8def1;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Alternancia de tonos */
+.list-group-item:nth-child(even) {
+  background-color: #eee6f7;
+}
+
+/* Último elemento */
+.list-group-item:last-child {
+  border-bottom: none;
+}
+
+/* Adaptación a móviles */
+@media (max-width: 600px) {
+  :host {
+    padding: 18px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .list-group-item {
+    padding: 14px 16px;
+    font-size: 14px;
+  }
+}

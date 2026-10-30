@@ -1,0 +1,82 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  padding: 28px;
+  font-family: Arial, sans-serif;
+  color: #514064;
+  background-color: #ffffff;
+}
+
+/* Título principal */
+h1 {
+  margin: 10px 0 28px;
+  color: #76558f !important;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* Tabla */
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border: 1px solid #d8c7e8;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+/* Cabecera */
+.table thead th {
+  padding: 15px 16px;
+  background-color: #cbb5df;
+  color: #514064;
+  border: none;
+  border-bottom: 1px solid #b69acb;
+  font-weight: 700;
+  text-align: left;
+}
+
+/* Celdas */
+.table tbody td {
+  padding: 13px 16px;
+  color: #514064;
+  background-color: #faf7ff;
+  border: none;
+  border-bottom: 1px solid #e8def1;
+}
+
+/* Filas alternas */
+.table tbody tr:nth-child(even) td {
+  background-color: #eee6f7;
+}
+
+/* Última fila */
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Hover de filas */
+.table tbody tr:hover td {
+  background-color: #e4d7f0;
+}
+
+/* Adaptación a móviles */
+@media (max-width: 600px) {
+  :host {
+    padding: 18px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .table {
+    font-size: 12px;
+  }
+
+  .table thead th,
+  .table tbody td {
+    padding: 10px 8px;
+  }
+}
